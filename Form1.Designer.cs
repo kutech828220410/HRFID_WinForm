@@ -110,6 +110,9 @@ namespace HRFID_WinForm
             this.plC_RJ_ScreenButton1 = new MyUI.PLC_RJ_ScreenButton();
             this.plC_RJ_ScreenButton2 = new MyUI.PLC_RJ_ScreenButton();
             this.plC_RJ_Button_主畫面_檢查UI = new MyUI.PLC_RJ_Button();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.plC_RJ_Button_系統更新 = new MyUI.PLC_RJ_Button();
+            this.ftp_DounloadUI = new MyFtpUI.Ftp_DounloadUI();
             this.panel_Main.SuspendLayout();
             this.panel232.SuspendLayout();
             this.plC_ScreenPage_Main.SuspendLayout();
@@ -136,6 +139,7 @@ namespace HRFID_WinForm
             this.rJ_Pannel2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel_系統.SuspendLayout();
+            this.groupBox26.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Main
@@ -1061,6 +1065,7 @@ namespace HRFID_WinForm
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.groupBox26);
             this.tabPage1.Controls.Add(this.plC_Button_最高權限);
             this.tabPage1.Controls.Add(this.plC_UI_Init);
             this.tabPage1.Controls.Add(this.lowerMachine_Panel1);
@@ -2161,6 +2166,76 @@ namespace HRFID_WinForm
             this.plC_RJ_Button_主畫面_檢查UI.顯示狀態 = false;
             this.plC_RJ_Button_主畫面_檢查UI.顯示讀取位置 = "S4077";
             // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.plC_RJ_Button_系統更新);
+            this.groupBox26.Controls.Add(this.ftp_DounloadUI);
+            this.groupBox26.Location = new System.Drawing.Point(904, 50);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(641, 278);
+            this.groupBox26.TabIndex = 110;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "系統更新";
+            this.groupBox26.Visible = false;
+            // 
+            // plC_RJ_Button_系統更新
+            // 
+            this.plC_RJ_Button_系統更新.AutoResetState = false;
+            this.plC_RJ_Button_系統更新.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.plC_RJ_Button_系統更新.Bool = false;
+            this.plC_RJ_Button_系統更新.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_系統更新.BorderRadius = 20;
+            this.plC_RJ_Button_系統更新.BorderSize = 0;
+            this.plC_RJ_Button_系統更新.but_press = false;
+            this.plC_RJ_Button_系統更新.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button_系統更新.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button_系統更新.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button_系統更新.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.plC_RJ_Button_系統更新.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button_系統更新.Location = new System.Drawing.Point(480, 211);
+            this.plC_RJ_Button_系統更新.Name = "plC_RJ_Button_系統更新";
+            this.plC_RJ_Button_系統更新.OFF_文字內容 = "系統更新";
+            this.plC_RJ_Button_系統更新.OFF_文字字體 = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.plC_RJ_Button_系統更新.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button_系統更新.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_系統更新.ON_文字內容 = "系統更新";
+            this.plC_RJ_Button_系統更新.ON_文字字體 = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.plC_RJ_Button_系統更新.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button_系統更新.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_系統更新.Size = new System.Drawing.Size(155, 61);
+            this.plC_RJ_Button_系統更新.State = false;
+            this.plC_RJ_Button_系統更新.TabIndex = 123;
+            this.plC_RJ_Button_系統更新.Text = "系統更新";
+            this.plC_RJ_Button_系統更新.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button_系統更新.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button_系統更新.字型鎖住 = false;
+            this.plC_RJ_Button_系統更新.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button_系統更新.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button_系統更新.文字鎖住 = false;
+            this.plC_RJ_Button_系統更新.致能讀取位置 = "S39019";
+            this.plC_RJ_Button_系統更新.讀取位元反向 = false;
+            this.plC_RJ_Button_系統更新.讀寫鎖住 = false;
+            this.plC_RJ_Button_系統更新.音效 = true;
+            this.plC_RJ_Button_系統更新.顯示 = false;
+            this.plC_RJ_Button_系統更新.顯示狀態 = false;
+            // 
+            // ftp_DounloadUI
+            // 
+            this.ftp_DounloadUI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ftp_DounloadUI.DownloadType = MyFtpUI.Ftp_DounloadUI.E_DownloadType.URL;
+            this.ftp_DounloadUI.FileName = "Setup.msi";
+            this.ftp_DounloadUI.FTP_Groupbox_要顯示 = false;
+            this.ftp_DounloadUI.FTP_Server = "ftp://kutech.myds.me/FTP";
+            this.ftp_DounloadUI.FTP_Server_要顯示 = false;
+            this.ftp_DounloadUI.Location = new System.Drawing.Point(6, 26);
+            this.ftp_DounloadUI.Name = "ftp_DounloadUI";
+            this.ftp_DounloadUI.Password = "test";
+            this.ftp_DounloadUI.Password_要顯示 = false;
+            this.ftp_DounloadUI.Size = new System.Drawing.Size(431, 246);
+            this.ftp_DounloadUI.TabIndex = 12;
+            this.ftp_DounloadUI.Username = "test";
+            this.ftp_DounloadUI.Username_要顯示 = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2169,10 +2244,10 @@ namespace HRFID_WinForm
             this.Controls.Add(this.plC_ScreenPage_Main);
             this.Controls.Add(this.panel_Main);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "調劑台傳送帶智慧通報系統";
+            this.Text = "自動輸送帶智慧通報系統";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_Main.ResumeLayout(false);
             this.panel232.ResumeLayout(false);
@@ -2202,6 +2277,7 @@ namespace HRFID_WinForm
             this.rJ_Pannel2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.panel_系統.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2288,6 +2364,9 @@ namespace HRFID_WinForm
         private MyUI.RJ_Pannel rJ_Pannel5;
         private MyUI.PLC_RJ_Button plC_RJ_Button_主畫面_檢查亮燈;
         private MyUI.PLC_RJ_Button plC_RJ_Button_主畫面_檢查UI;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private MyUI.PLC_RJ_Button plC_RJ_Button_系統更新;
+        private MyFtpUI.Ftp_DounloadUI ftp_DounloadUI;
     }
 }
 

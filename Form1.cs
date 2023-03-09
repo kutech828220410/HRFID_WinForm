@@ -73,6 +73,107 @@ namespace HRFID_WinForm
 
         }
         #endregion
+        #region MyConfigClass
+        private const string MyConfigFileName = "MyConfig.txt";
+        public MyConfigClass myConfigClass = new MyConfigClass();
+        public class MyConfigClass
+        {
+
+            private bool _線上更新 = true;
+
+
+
+            public bool 線上更新 { get => _線上更新; set => _線上更新 = value; }
+        }
+        private void LoadMyConfig()
+        {
+            string jsonstr = MyFileStream.LoadFileAllText($".//{MyConfigFileName}");
+            if (jsonstr.StringIsEmpty())
+            {
+                jsonstr = Basic.Net.JsonSerializationt<MyConfigClass>(new MyConfigClass(), true);
+                List<string> list_jsonstring = new List<string>();
+                list_jsonstring.Add(jsonstr);
+                if (!MyFileStream.SaveFile($".//{MyConfigFileName}", list_jsonstring))
+                {
+                    MyMessageBox.ShowDialog($"建立{MyConfigFileName}檔案失敗!");
+                }
+                MyMessageBox.ShowDialog($"未建立參數文件!請至子目錄設定{MyConfigFileName}");
+                Application.Exit();
+            }
+            else
+            {
+                myConfigClass = Basic.Net.JsonDeserializet<MyConfigClass>(jsonstr);
+
+                jsonstr = Basic.Net.JsonSerializationt<MyConfigClass>(myConfigClass, true);
+                List<string> list_jsonstring = new List<string>();
+                list_jsonstring.Add(jsonstr);
+                if (!MyFileStream.SaveFile($".//{MyConfigFileName}", list_jsonstring))
+                {
+                    MyMessageBox.ShowDialog($"建立{MyConfigFileName}檔案失敗!");
+                }
+
+            }
+
+        }
+        #endregion
+        #region FtpConfigClass
+        private const string FtpConfigFileName = "FtpConfig.txt";
+        public FtpConfigClass ftpConfigClass = new FtpConfigClass();
+        public class FtpConfigClass
+        {
+            private string fTP_Server = "";
+            private string fTP_username = "";
+            private string fTP_password = "";
+
+            public string FTP_Server { get => fTP_Server; set => fTP_Server = value; }
+            public string FTP_username { get => fTP_username; set => fTP_username = value; }
+            public string FTP_password { get => fTP_password; set => fTP_password = value; }
+        }
+        private void LoadFtpConfig()
+        {
+            string jsonstr = MyFileStream.LoadFileAllText($".//{FtpConfigFileName}");
+            if (jsonstr.StringIsEmpty())
+            {
+                jsonstr = Basic.Net.JsonSerializationt<FtpConfigClass>(new FtpConfigClass(), true);
+                List<string> list_jsonstring = new List<string>();
+                list_jsonstring.Add(jsonstr);
+                if (!MyFileStream.SaveFile($".//{FtpConfigFileName}", list_jsonstring))
+                {
+                    MyMessageBox.ShowDialog($"建立{FtpConfigFileName}檔案失敗!");
+                }
+                MyMessageBox.ShowDialog($"未建立參數文件!請至子目錄設定{FtpConfigFileName}");
+                Application.Exit();
+            }
+            else
+            {
+                ftpConfigClass = Basic.Net.JsonDeserializet<FtpConfigClass>(jsonstr);
+
+                jsonstr = Basic.Net.JsonSerializationt<FtpConfigClass>(ftpConfigClass, true);
+                List<string> list_jsonstring = new List<string>();
+                list_jsonstring.Add(jsonstr);
+                if (!MyFileStream.SaveFile($".//{FtpConfigFileName}", list_jsonstring))
+                {
+                    MyMessageBox.ShowDialog($"建立{FtpConfigFileName}檔案失敗!");
+                }
+
+            }
+            if (myConfigClass.線上更新)
+            {
+                this.ftp_DounloadUI.FTP_Server = ftpConfigClass.FTP_Server;
+                this.ftp_DounloadUI.Username = ftpConfigClass.FTP_username;
+                this.ftp_DounloadUI.Password = ftpConfigClass.FTP_password;
+                string updateVersion = this.ftp_DounloadUI.GetFileVersion();
+                if (this.ftp_DounloadUI.CheckUpdate(this.ProductVersion, updateVersion))
+                {
+                    if (Basic.MyMessageBox.ShowDialog(string.Format("有新版本是否更新? (Ver : {0})", updateVersion), "Update", Basic.MyMessageBox.enum_BoxType.Asterisk, Basic.MyMessageBox.enum_Button.Confirm_Cancel) == DialogResult.Yes)
+                    {
+                        this.Invoke(new Action(delegate { this.Update(); }));
+                    }
+                }
+            }
+
+        }
+        #endregion
         public Form1()
         {
             InitializeComponent();
@@ -81,7 +182,8 @@ namespace HRFID_WinForm
         private void Form1_Load(object sender, EventArgs e)
         {
             this.LoadDBConfig();
-
+            this.LoadMyConfig();
+            this.LoadFtpConfig();
             MyMessageBox.form = this.FindForm();
             Dialog_NumPannel.form = this.FindForm();
             MyMessageBox.音效 = false;

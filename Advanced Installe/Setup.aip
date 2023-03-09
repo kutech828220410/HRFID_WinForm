@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="15.0.1" version="15.0.1" PreviousModules="simple" Modules="professional" RootPath="." Language="zh_TW" Id="{3BD98E16-ED45-486D-ADE7-70593B5510EA}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXAppDetailsComponent;AppXCapabilitiesComponent;AppXDependenciesComponent;AppXProductDetailsComponent;AppXVisualAssetsComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="[|ProductName]   Ver[|ProductVersion] " ValueLocId="*"/>
+    <ROW Property="ARPCONTACT" Value="Ver[|ProductVersion]"/>
+    <ROW Property="ARPHELPLINK" Value="Ver[|ProductVersion]"/>
+    <ROW Property="ARPHELPTELEPHONE" Value="Ver[|ProductVersion]"/>
+    <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPNOREPAIR" Value="1"/>
+    <ROW Property="ARPPRODUCTICON" Value="anfdcgkfud001.exe" Type="8"/>
+    <ROW Property="ARPURLINFOABOUT" Value="Ver[|ProductVersion]"/>
+    <ROW Property="ARPURLUPDATEINFO" Value="Ver[|ProductVersion]"/>
+    <ROW Property="AiSkipExitDlg" Value="1"/>
+    <ROW Property="CTRLS" Value="2"/>
+    <ROW Property="Manufacturer" Value="力翔精密機械有限公司"/>
+    <ROW Property="ProductCode" Value="1028:{A78645F7-A6A1-4245-92D5-8EDE8F764B3D} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1028"/>
+    <ROW Property="ProductName" Value="自動輸送帶智慧通報系統"/>
+    <ROW Property="ProductVersion" Value="1.0.0.0" Type="32" TargetFile="_.exe"/>
+    <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{9E8E570F-0E09-4BCD-A3D4-0EE2FFDFC180}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003 RTM, Windows XP/2003 SP1, Windows XP SP2 x86" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AxAltairUDrv.dll" ComponentId="{80889ADA-19BD-45F7-A41D-69C012081B05}" Directory_="APPDIR" Attributes="0" KeyPath="AxAltairUDrv.dll"/>
+    <ROW Component="AxAltairUDrvAsm4.5.dll" ComponentId="{3F45AEE0-A34C-4C90-8AC0-48232659283A}" Directory_="APPDIR" Attributes="0" KeyPath="AxAltairUDrvAsm4.5.dll"/>
+    <ROW Component="AxOvkBase.dll" ComponentId="{051E929A-B55D-44E1-A8A0-1A5847CB4A32}" Directory_="APPDIR" Attributes="0" KeyPath="AxOvkBase.dll"/>
+    <ROW Component="AxOvkBaseAsm4.5.dll" ComponentId="{42284A5B-D0AB-43B2-AA3F-6034CA27F233}" Directory_="APPDIR" Attributes="0" KeyPath="AxOvkBaseAsm4.5.dll"/>
+    <ROW Component="AxOvkMsr.dll" ComponentId="{F67E5C72-D376-442A-91A5-D1E2AF75E615}" Directory_="APPDIR" Attributes="0" KeyPath="AxOvkMsr.dll"/>
+    <ROW Component="Basic.dll" ComponentId="{841F168B-D0DF-40E9-9854-8787763D6BAB}" Directory_="APPDIR" Attributes="0" KeyPath="Basic.dll"/>
+    <ROW Component="CallBackUI.dll" ComponentId="{3BFDC6F0-A6CC-4836-8282-1B6BC7289491}" Directory_="APPDIR" Attributes="0" KeyPath="CallBackUI.dll"/>
+    <ROW Component="DBConfig.txt" ComponentId="{C61CE06B-C118-4A6A-A7DA-FE822163E17F}" Directory_="APPDIR" Attributes="0" KeyPath="DBConfig.txt" Type="0"/>
+    <ROW Component="DrawingClass.dll" ComponentId="{CBE22688-AD6C-44A1-B0EC-A23F76484283}" Directory_="APPDIR" Attributes="0" KeyPath="DrawingClass.dll"/>
+    <ROW Component="FontAwesome.Sharp.dll" ComponentId="{2524A92C-2E96-4B43-9442-9FA56978EAC0}" Directory_="APPDIR" Attributes="0" KeyPath="FontAwesome.Sharp.dll"/>
+    <ROW Component="HCGUI.dll" ComponentId="{785BB10E-411E-4B1C-B276-E5DE57245BF7}" Directory_="APPDIR" Attributes="0" KeyPath="HCGUI.dll"/>
+    <ROW Component="HRFID_WinForm.exe" ComponentId="{55A7BD4E-2BC3-4D9E-8017-212641B7D3B4}" Directory_="APPDIR" Attributes="0" KeyPath="HRFID_WinForm.pdb"/>
+    <ROW Component="H_Pannel_lib.dll" ComponentId="{0037E293-1FA7-42F3-AF0F-8443B7EAB895}" Directory_="APPDIR" Attributes="0" KeyPath="H_Pannel_lib.dll"/>
+    <ROW Component="LadderUI.dll" ComponentId="{26D34606-C77B-4970-9F2D-24DDB5FF8A72}" Directory_="APPDIR" Attributes="0" KeyPath="LadderUI.dll"/>
+    <ROW Component="LeadShineUI.dll" ComponentId="{90DFAFED-6DCF-4210-90BD-596A2DE2960C}" Directory_="APPDIR" Attributes="0" KeyPath="LeadShineUI.dll"/>
+    <ROW Component="LicenseLib.dll" ComponentId="{EE87DB2C-D832-4F8B-AAF0-E98CDEE2792E}" Directory_="APPDIR" Attributes="0" KeyPath="LicenseLib.dll"/>
+    <ROW Component="LightControlUI.dll" ComponentId="{77D14C4A-0A74-4E45-98D7-E6C5C73BD555}" Directory_="APPDIR" Attributes="0" KeyPath="LightControlUI.dll"/>
+    <ROW Component="MVSDK.dll" ComponentId="{96C7F8F5-2162-4DE0-981A-7D8E7167EC24}" Directory_="APPDIR" Attributes="0" KeyPath="MVSDK.dll"/>
+    <ROW Component="MVSDKUI.dll" ComponentId="{744BD2C1-8C73-45EC-B2D6-2DCD9BEF923C}" Directory_="APPDIR" Attributes="0" KeyPath="MVSDKUI.dll"/>
+    <ROW Component="MeasureSystemFunction.dll" ComponentId="{F490F43B-77DA-49B6-9716-7016D7785B7D}" Directory_="APPDIR" Attributes="0" KeyPath="MeasureSystemFunction.dll"/>
+    <ROW Component="MeasureSystemUI.dll" ComponentId="{25F41037-E11F-47BB-BD41-DBE69D50DF6E}" Directory_="APPDIR" Attributes="0" KeyPath="MeasureSystemUI.dll"/>
+    <ROW Component="Microsoft.Bcl.AsyncInterfaces.dll" ComponentId="{5EBD518B-DDAE-48D4-9D48-36BF1DECF4DB}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW Component="MyFtpUI.dll" ComponentId="{138C5CEE-5C0F-4370-B165-75F5C1A1F17C}" Directory_="APPDIR" Attributes="0" KeyPath="MyFtpUI.dll"/>
+    <ROW Component="MySql.Data.dll" ComponentId="{B1979488-9B9C-4431-A2CE-D2483D5CFFFB}" Directory_="APPDIR" Attributes="0" KeyPath="MySql.Data.dll"/>
+    <ROW Component="MySqlBackup.dll" ComponentId="{93DA53F9-933E-4DA9-8101-38597E7B0DDB}" Directory_="APPDIR" Attributes="0" KeyPath="MySqlBackup.dll"/>
+    <ROW Component="MyUI.dll" ComponentId="{B6E21B44-C225-420D-B450-87C2AC42C4CF}" Directory_="APPDIR" Attributes="0" KeyPath="MyUI.dll"/>
+    <ROW Component="Newtonsoft.Json.dll" ComponentId="{CDBBA178-2DF8-4E91-8E00-1A099DF8C0AF}" Directory_="APPDIR" Attributes="0" KeyPath="Newtonsoft.Json.dll"/>
+    <ROW Component="PC_Control.dll" ComponentId="{D3D44E6A-7BAA-43F2-B33D-1FDBC1A1FF1A}" Directory_="APPDIR" Attributes="0" KeyPath="PC_Control.dll"/>
+    <ROW Component="PortControlUI.dll" ComponentId="{73F67D1E-4DC4-400E-BEF6-8DBF89CC396C}" Directory_="APPDIR" Attributes="0" KeyPath="PortControlUI.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{C29F1C15-9AFB-4D93-A898-3D4278B4C954}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{09F3A793-A15F-4693-9D3D-E7B951CC9F07}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="SLDUI.dll" ComponentId="{86FF82EF-78B1-4114-9479-D436C80168F1}" Directory_="APPDIR" Attributes="0" KeyPath="SLDUI.dll"/>
+    <ROW Component="SQLUI.dll" ComponentId="{124269D5-DEC8-432D-A4AD-E5F8CA49D62E}" Directory_="APPDIR" Attributes="0" KeyPath="SQLUI.dll"/>
+    <ROW Component="System.Buffers.dll" ComponentId="{6B9E768D-D930-4905-A458-7551A6642292}" Directory_="APPDIR" Attributes="0" KeyPath="System.Buffers.dll"/>
+    <ROW Component="System.Memory.dll" ComponentId="{CD131401-82BD-4ECA-B1B3-C4CA3C20FB95}" Directory_="APPDIR" Attributes="0" KeyPath="System.Memory.dll"/>
+    <ROW Component="System.Numerics.Vectors.dll" ComponentId="{68C3B71D-4B19-4C29-A848-6ECAFE298C03}" Directory_="APPDIR" Attributes="0" KeyPath="System.Numerics.Vectors.dll"/>
+    <ROW Component="System.Runtime.CompilerServices.Unsafe.dll" ComponentId="{E0A2C0DA-8EDE-4783-AC8F-BFEB49F526F3}" Directory_="APPDIR" Attributes="0" KeyPath="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW Component="System.Text.Encodings.Web.dll" ComponentId="{CD31D104-4438-4B9E-8E88-02D448142A60}" Directory_="APPDIR" Attributes="0" KeyPath="System.Text.Encodings.Web.dll"/>
+    <ROW Component="System.Text.Json.dll" ComponentId="{BF7B715E-A576-429B-B4B6-38FE76FD3EA3}" Directory_="APPDIR" Attributes="0" KeyPath="System.Text.Json.dll"/>
+    <ROW Component="System.Threading.Tasks.Extensions.dll" ComponentId="{18EEE1CA-FFC8-46B8-A4D4-642344B9AE5C}" Directory_="APPDIR" Attributes="0" KeyPath="System.Threading.Tasks.Extensions.dll"/>
+    <ROW Component="System.ValueTuple.dll" ComponentId="{70E186B3-BAE9-4D42-9F4C-C2FDDD1587C5}" Directory_="APPDIR" Attributes="0" KeyPath="System.ValueTuple.dll"/>
+    <ROW Component="TCP.dll" ComponentId="{DE0EE686-264F-490B-8C85-BC6CD708B3E2}" Directory_="APPDIR" Attributes="0" KeyPath="TCP.dll"/>
+    <ROW Component="ZealTechUI.dll" ComponentId="{BE97AAC4-FE09-4BEB-9F53-61C58FB37645}" Directory_="APPDIR" Attributes="0" KeyPath="ZealTechUI.dll"/>
+    <ROW Component="_.exe" ComponentId="{905B3793-D45F-4D77-9F44-0A1477D8041C}" Directory_="APPDIR" Attributes="0" KeyPath="_.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0" Components="AxAltairUDrv.dll AxAltairUDrvAsm4.5.dll AxOvkBase.dll AxOvkBaseAsm4.5.dll AxOvkMsr.dll Basic.dll CallBackUI.dll DBConfig.txt DrawingClass.dll FontAwesome.Sharp.dll HCGUI.dll HRFID_WinForm.exe H_Pannel_lib.dll LadderUI.dll LeadShineUI.dll LicenseLib.dll LightControlUI.dll MVSDK.dll MVSDKUI.dll MeasureSystemFunction.dll MeasureSystemUI.dll Microsoft.Bcl.AsyncInterfaces.dll MyFtpUI.dll MySql.Data.dll MySqlBackup.dll MyUI.dll Newtonsoft.Json.dll PC_Control.dll PortControlUI.dll ProductInformation SHORTCUTDIR SLDUI.dll SQLUI.dll System.Buffers.dll System.Memory.dll System.Numerics.Vectors.dll System.Runtime.CompilerServices.Unsafe.dll System.Text.Encodings.Web.dll System.Text.Json.dll System.Threading.Tasks.Extensions.dll System.ValueTuple.dll TCP.dll ZealTechUI.dll _.exe"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AxAltairUDrv.dll" Component_="AxAltairUDrv.dll" FileName="AXALTA~1.DLL|AxAltairUDrv.dll" Attributes="0" SourcePath="..\bin\Release\AxAltairUDrv.dll" SelfReg="false" NextFile="AxAltairUDrvAsm4.5.dll"/>
+    <ROW File="AxAltairUDrvAsm4.5.dll" Component_="AxAltairUDrvAsm4.5.dll" FileName="AXALTA~2.DLL|AxAltairUDrvAsm4.5.dll" Attributes="0" SourcePath="..\bin\Release\AxAltairUDrvAsm4.5.dll" SelfReg="false" NextFile="AxOvkBase.dll"/>
+    <ROW File="AxOvkBase.dll" Component_="AxOvkBase.dll" FileName="AXOVKB~1.DLL|AxOvkBase.dll" Attributes="0" SourcePath="..\bin\Release\AxOvkBase.dll" SelfReg="false" NextFile="AxOvkBaseAsm4.5.dll"/>
+    <ROW File="AxOvkBaseAsm4.5.dll" Component_="AxOvkBaseAsm4.5.dll" FileName="AXOVKB~2.DLL|AxOvkBaseAsm4.5.dll" Attributes="0" SourcePath="..\bin\Release\AxOvkBaseAsm4.5.dll" SelfReg="false" NextFile="AxOvkMsr.dll"/>
+    <ROW File="AxOvkMsr.dll" Component_="AxOvkMsr.dll" FileName="AxOvkMsr.dll" Attributes="0" SourcePath="..\bin\Release\AxOvkMsr.dll" SelfReg="false" NextFile="Basic.dll"/>
+    <ROW File="Basic.dll" Component_="Basic.dll" FileName="Basic.dll" Attributes="0" SourcePath="..\bin\Release\Basic.dll" SelfReg="false" NextFile="CallBackUI.dll"/>
+    <ROW File="CallBackUI.dll" Component_="CallBackUI.dll" FileName="CALLBA~1.DLL|CallBackUI.dll" Attributes="0" SourcePath="..\bin\Release\CallBackUI.dll" SelfReg="false" NextFile="DBConfig.txt"/>
+    <ROW File="DBConfig.txt" Component_="DBConfig.txt" FileName="DBConfig.txt" Attributes="0" SourcePath="..\bin\Release\DBConfig.txt" SelfReg="false" NextFile="Device.val"/>
+    <ROW File="Device.val" Component_="DBConfig.txt" FileName="Device.val" Attributes="0" SourcePath="..\bin\Release\Device.val" SelfReg="false" NextFile="DrawingClass.dll"/>
+    <ROW File="DrawingClass.dll" Component_="DrawingClass.dll" FileName="DRAWIN~1.DLL|DrawingClass.dll" Attributes="0" SourcePath="..\bin\Release\DrawingClass.dll" SelfReg="false" NextFile="FontAwesome.Sharp.dll"/>
+    <ROW File="FontAwesome.Sharp.dll" Component_="FontAwesome.Sharp.dll" FileName="FONTAW~1.DLL|FontAwesome.Sharp.dll" Attributes="0" SourcePath="..\bin\Release\FontAwesome.Sharp.dll" SelfReg="false" NextFile="FtpConfig.txt"/>
+    <ROW File="FtpConfig.txt" Component_="DBConfig.txt" FileName="FTPCON~1.TXT|FtpConfig.txt" Attributes="0" SourcePath="..\bin\Release\FtpConfig.txt" SelfReg="false" NextFile="H_Pannel_lib.dll"/>
+    <ROW File="HCGUI.dll" Component_="HCGUI.dll" FileName="HCGUI.dll" Attributes="0" SourcePath="..\bin\Release\HCGUI.dll" SelfReg="false" NextFile="HRFID_WinForm.exe.config"/>
+    <ROW File="HRFID_WinForm.exe.config" Component_="DBConfig.txt" FileName="HRFID_~1.CON|HRFID_WinForm.exe.config" Attributes="0" SourcePath="..\bin\Release\HRFID_WinForm.exe.config" SelfReg="false" NextFile="HRFID_WinForm.pdb"/>
+    <ROW File="HRFID_WinForm.pdb" Component_="HRFID_WinForm.exe" FileName="HRFID_~1.PDB|HRFID_WinForm.pdb" Attributes="0" SourcePath="..\bin\Release\HRFID_WinForm.pdb" SelfReg="false" NextFile="LadderUI.dll"/>
+    <ROW File="H_Pannel_lib.dll" Component_="H_Pannel_lib.dll" FileName="H_PANN~1.DLL|H_Pannel_lib.dll" Attributes="0" SourcePath="..\bin\Release\H_Pannel_lib.dll" SelfReg="false" NextFile="HCGUI.dll"/>
+    <ROW File="LadderUI.dll" Component_="LadderUI.dll" FileName="LadderUI.dll" Attributes="0" SourcePath="..\bin\Release\LadderUI.dll" SelfReg="false" NextFile="LeadShineUI.dll"/>
+    <ROW File="LeadShineUI.dll" Component_="LeadShineUI.dll" FileName="LEADSH~1.DLL|LeadShineUI.dll" Attributes="0" SourcePath="..\bin\Release\LeadShineUI.dll" SelfReg="false" NextFile="LicenseLib.dll"/>
+    <ROW File="LicenseLib.dll" Component_="LicenseLib.dll" FileName="LICENS~1.DLL|LicenseLib.dll" Attributes="0" SourcePath="..\bin\Release\LicenseLib.dll" SelfReg="false" NextFile="LightControlUI.dll"/>
+    <ROW File="LightControlUI.dll" Component_="LightControlUI.dll" FileName="LIGHTC~1.DLL|LightControlUI.dll" Attributes="0" SourcePath="..\bin\Release\LightControlUI.dll" SelfReg="false" NextFile="MeasureSystemFunction.dll"/>
+    <ROW File="MVSDK.dll" Component_="MVSDK.dll" FileName="MVSDK.dll" Attributes="0" SourcePath="..\bin\Release\MVSDK.dll" SelfReg="false" NextFile="MVSDKUI.dll"/>
+    <ROW File="MVSDKUI.dll" Component_="MVSDKUI.dll" FileName="MVSDKUI.dll" Attributes="0" SourcePath="..\bin\Release\MVSDKUI.dll" SelfReg="false" NextFile="MyConfig.txt"/>
+    <ROW File="MeasureSystemFunction.dll" Component_="MeasureSystemFunction.dll" FileName="MEASUR~1.DLL|MeasureSystemFunction.dll" Attributes="0" SourcePath="..\bin\Release\MeasureSystemFunction.dll" SelfReg="false" NextFile="MeasureSystemUI.dll"/>
+    <ROW File="MeasureSystemUI.dll" Component_="MeasureSystemUI.dll" FileName="MEASUR~2.DLL|MeasureSystemUI.dll" Attributes="0" SourcePath="..\bin\Release\MeasureSystemUI.dll" SelfReg="false" NextFile="Microsoft.Bcl.AsyncInterfaces.dll"/>
+    <ROW File="Microsoft.Bcl.AsyncInterfaces.dll" Component_="Microsoft.Bcl.AsyncInterfaces.dll" FileName="MICROS~1.DLL|Microsoft.Bcl.AsyncInterfaces.dll" Attributes="0" SourcePath="..\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll" SelfReg="false" NextFile="Microsoft.Bcl.AsyncInterfaces.xml"/>
+    <ROW File="Microsoft.Bcl.AsyncInterfaces.xml" Component_="DBConfig.txt" FileName="MICROS~1.XML|Microsoft.Bcl.AsyncInterfaces.xml" Attributes="0" SourcePath="..\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml" SelfReg="false" NextFile="MVSDK.dll"/>
+    <ROW File="MyConfig.txt" Component_="DBConfig.txt" FileName="MyConfig.txt" Attributes="0" SourcePath="..\bin\Release\MyConfig.txt" SelfReg="false" NextFile="MyFtpUI.dll"/>
+    <ROW File="MyFtpUI.dll" Component_="MyFtpUI.dll" FileName="MyFtpUI.dll" Attributes="0" SourcePath="..\bin\Release\MyFtpUI.dll" SelfReg="false" NextFile="MySql.Data.dll"/>
+    <ROW File="MySql.Data.dll" Component_="MySql.Data.dll" FileName="MYSQLD~1.DLL|MySql.Data.dll" Attributes="0" SourcePath="..\bin\Release\MySql.Data.dll" SelfReg="false" NextFile="MySqlBackup.dll"/>
+    <ROW File="MySqlBackup.dll" Component_="MySqlBackup.dll" FileName="MYSQLB~1.DLL|MySqlBackup.dll" Attributes="0" SourcePath="..\bin\Release\MySqlBackup.dll" SelfReg="false" NextFile="MyUI.dll"/>
+    <ROW File="MyUI.dll" Component_="MyUI.dll" FileName="MyUI.dll" Attributes="0" SourcePath="..\bin\Release\MyUI.dll" SelfReg="false" NextFile="Newtonsoft.Json.dll"/>
+    <ROW File="Newtonsoft.Json.dll" Component_="Newtonsoft.Json.dll" FileName="NEWTON~1.DLL|Newtonsoft.Json.dll" Attributes="0" SourcePath="..\bin\Release\Newtonsoft.Json.dll" SelfReg="false" NextFile="PC_Control.dll"/>
+    <ROW File="PC_Control.dll" Component_="PC_Control.dll" FileName="PC_CON~1.DLL|PC_Control.dll" Attributes="0" SourcePath="..\bin\Release\PC_Control.dll" SelfReg="false" NextFile="PortControlUI.dll"/>
+    <ROW File="PortControlUI.dll" Component_="PortControlUI.dll" FileName="PORTCO~1.DLL|PortControlUI.dll" Attributes="0" SourcePath="..\bin\Release\PortControlUI.dll" SelfReg="false" NextFile="program.stp"/>
+    <ROW File="SLDUI.dll" Component_="SLDUI.dll" FileName="SLDUI.dll" Attributes="0" SourcePath="..\bin\Release\SLDUI.dll" SelfReg="false" NextFile="SQLUI.dll"/>
+    <ROW File="SQLUI.dll" Component_="SQLUI.dll" FileName="SQLUI.dll" Attributes="0" SourcePath="..\bin\Release\SQLUI.dll" SelfReg="false" NextFile="System.Buffers.dll"/>
+    <ROW File="System.Buffers.dll" Component_="System.Buffers.dll" FileName="SYSTEM~1.DLL|System.Buffers.dll" Attributes="0" SourcePath="..\bin\Release\System.Buffers.dll" SelfReg="false" NextFile="System.Buffers.xml"/>
+    <ROW File="System.Buffers.xml" Component_="DBConfig.txt" FileName="SYSTEM~1.XML|System.Buffers.xml" Attributes="0" SourcePath="..\bin\Release\System.Buffers.xml" SelfReg="false" NextFile="System.Memory.dll"/>
+    <ROW File="System.Memory.dll" Component_="System.Memory.dll" FileName="SYSTEM~2.DLL|System.Memory.dll" Attributes="0" SourcePath="..\bin\Release\System.Memory.dll" SelfReg="false" NextFile="System.Memory.xml"/>
+    <ROW File="System.Memory.xml" Component_="DBConfig.txt" FileName="SYSTEM~2.XML|System.Memory.xml" Attributes="0" SourcePath="..\bin\Release\System.Memory.xml" SelfReg="false" NextFile="System.Numerics.Vectors.dll"/>
+    <ROW File="System.Numerics.Vectors.dll" Component_="System.Numerics.Vectors.dll" FileName="SYSTEM~3.DLL|System.Numerics.Vectors.dll" Attributes="0" SourcePath="..\bin\Release\System.Numerics.Vectors.dll" SelfReg="false" NextFile="System.Numerics.Vectors.xml"/>
+    <ROW File="System.Numerics.Vectors.xml" Component_="DBConfig.txt" FileName="SYSTEM~3.XML|System.Numerics.Vectors.xml" Attributes="0" SourcePath="..\bin\Release\System.Numerics.Vectors.xml" SelfReg="false" NextFile="System.Runtime.CompilerServices.Unsafe.dll"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.dll" Component_="System.Runtime.CompilerServices.Unsafe.dll" FileName="SYSTEM~4.DLL|System.Runtime.CompilerServices.Unsafe.dll" Attributes="0" SourcePath="..\bin\Release\System.Runtime.CompilerServices.Unsafe.dll" SelfReg="false" NextFile="System.Runtime.CompilerServices.Unsafe.xml"/>
+    <ROW File="System.Runtime.CompilerServices.Unsafe.xml" Component_="DBConfig.txt" FileName="SYSTEM~4.XML|System.Runtime.CompilerServices.Unsafe.xml" Attributes="0" SourcePath="..\bin\Release\System.Runtime.CompilerServices.Unsafe.xml" SelfReg="false" NextFile="System.Text.Encodings.Web.dll"/>
+    <ROW File="System.Text.Encodings.Web.dll" Component_="System.Text.Encodings.Web.dll" FileName="SYSTEM~5.DLL|System.Text.Encodings.Web.dll" Attributes="0" SourcePath="..\bin\Release\System.Text.Encodings.Web.dll" SelfReg="false" NextFile="System.Text.Encodings.Web.xml"/>
+    <ROW File="System.Text.Encodings.Web.xml" Component_="DBConfig.txt" FileName="SYSTEM~5.XML|System.Text.Encodings.Web.xml" Attributes="0" SourcePath="..\bin\Release\System.Text.Encodings.Web.xml" SelfReg="false" NextFile="System.Text.Json.dll"/>
+    <ROW File="System.Text.Json.dll" Component_="System.Text.Json.dll" FileName="SYSTEM~6.DLL|System.Text.Json.dll" Attributes="0" SourcePath="..\bin\Release\System.Text.Json.dll" SelfReg="false" NextFile="System.Text.Json.xml"/>
+    <ROW File="System.Text.Json.xml" Component_="DBConfig.txt" FileName="SYSTEM~6.XML|System.Text.Json.xml" Attributes="0" SourcePath="..\bin\Release\System.Text.Json.xml" SelfReg="false" NextFile="System.Threading.Tasks.Extensions.dll"/>
+    <ROW File="System.Threading.Tasks.Extensions.dll" Component_="System.Threading.Tasks.Extensions.dll" FileName="SYSTEM~7.DLL|System.Threading.Tasks.Extensions.dll" Attributes="0" SourcePath="..\bin\Release\System.Threading.Tasks.Extensions.dll" SelfReg="false" NextFile="System.Threading.Tasks.Extensions.xml"/>
+    <ROW File="System.Threading.Tasks.Extensions.xml" Component_="DBConfig.txt" FileName="SYSTEM~7.XML|System.Threading.Tasks.Extensions.xml" Attributes="0" SourcePath="..\bin\Release\System.Threading.Tasks.Extensions.xml" SelfReg="false" NextFile="System.ValueTuple.dll"/>
+    <ROW File="System.ValueTuple.dll" Component_="System.ValueTuple.dll" FileName="SYSTEM~8.DLL|System.ValueTuple.dll" Attributes="0" SourcePath="..\bin\Release\System.ValueTuple.dll" SelfReg="false" NextFile="System.ValueTuple.xml"/>
+    <ROW File="System.ValueTuple.xml" Component_="DBConfig.txt" FileName="SYSTEM~8.XML|System.ValueTuple.xml" Attributes="0" SourcePath="..\bin\Release\System.ValueTuple.xml" SelfReg="false" NextFile="TCP.dll"/>
+    <ROW File="TCP.dll" Component_="TCP.dll" FileName="TCP.dll" Attributes="0" SourcePath="..\bin\Release\TCP.dll" SelfReg="false" NextFile="ZealTechUI.dll"/>
+    <ROW File="ZealTechUI.dll" Component_="ZealTechUI.dll" FileName="ZEALTE~1.DLL|ZealTechUI.dll" Attributes="0" SourcePath="..\bin\Release\ZealTechUI.dll" SelfReg="false"/>
+    <ROW File="_.exe" Component_="_.exe" FileName="HRFID_~1.EXE|HRFID_WinForm.exe" Version="65535.65535.65535.65535" Attributes="0" SourcePath="..\bin\Release\HRFID_WinForm.exe" SelfReg="false" NextFile="AxAltairUDrv.dll" DigSign="true"/>
+    <ROW File="program.stp" Component_="DBConfig.txt" FileName="program.stp" Attributes="0" SourcePath="..\bin\Release\program.stp" SelfReg="false" NextFile="SLDUI.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="." Languages="zh_TW" InstallationType="4" ExtUI="true" UseLargeSchema="true" UACExecutionLevel="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_zh_TW.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="PreparePrereqDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\PreparePrereqDlg.aip"/>
+    <ROW Fragment="PrerequisitesDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\PrerequisitesDlg.aip"/>
+    <ROW Fragment="ProgressPrereqDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\ProgressPrereqDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="SetupTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SetupTypeDlg.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+    <ROW Fragment="WelcomePrereqDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomePrereqDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="204"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="205"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="TypicalButton" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="102"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="CompleteButton" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL AND InstallMode=InstallModeComplete" Ordering="201"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeComplete" Ordering="203"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="102"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="202"/>
+    <ROW Dialog_="SetupTypeDlg" Control_="CustomButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="SetupTypeDlg" Condition="AI_INSTALL AND InstallMode=InstallModeCustom" Ordering="2"/>
+    <ROW Dialog_="WelcomePrereqDlg" Control_="Next" Event="NewDialog" Argument="PrerequisitesDlg" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="PrerequisitesDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+    <ROW Dialog_="PrerequisitesDlg" Control_="Back" Event="NewDialog" Argument="WelcomePrereqDlg" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_FinishActions" Type="1" Source="aicustact.dll" Target="RunAllExitActions"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_LaunchApp" Type="1" Source="aicustact.dll" Target="[#_.exe]"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_RestartElevated" Type="1" Source="aicustact.dll" Target="RestartElevated"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:C:\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="anfdcgkfud001.exe" SourcePath="..\anfdc-gkfud-001.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="54"/>
+    <ROW Action="AI_DpiContentScale" Sequence="53"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="52"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="102"/>
+    <ROW Action="AI_AppSearchEx" Sequence="101"/>
+    <ROW Action="AI_FinishActions" Condition="AI_INSTALL AND AiSkipExitDlg" Sequence="1301"/>
+    <ROW Action="AI_RestartElevated" Sequence="51" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] 無法安裝在 [WindowsTypeNT40Display]。" DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] 無法安裝在 [WindowsTypeNT50Display]。" DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT64 OR ((VersionNT &lt;&gt; 501) OR (ServicePackLevel = 3))) AND ((VersionNT &lt;&gt; 502) OR (ServicePackLevel = 2))" Description="[ProductName] 無法安裝在 [WindowsTypeNT5XDisplay]。" DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] 無法安裝在 [WindowsType9XDisplay]。" DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="_" Directory_="SHORTCUTDIR" Name="自動輸送帶智~1|自動輸送帶智慧通報系統" Component_="_.exe" Target="[#_.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="exe_1" Directory_="DesktopFolder" Name="自動輸送帶智~1.EXE|自動輸送帶智慧通報系統.exe" Component_="_.exe" Target="[#_.exe]" Description="義診藥品管理系統.exe" Hotkey="0" Icon_="anfdcgkfud001.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="FDE9FBF14C64382AEFB5867591829B2" DisplayName=".NET Framework 4.6.1" SetupFileUrl="Prerequisites\.NET Framework 4.6.1\NDP461-KB3102436-x86-x64-AllOS-ENU.exe" Location="0" ExactSize="0" WinNTVersions="Windows XP SP3 x86, Windows Server 2003 SP2 x86, Windows Vista x86, Windows Server 2008 x86, Windows 7 RTM x86, Windows 10 version 1511 x86, Windows 10 version 1607 x86, Windows 10 version 1703 x86, Windows 10 version 1709 x86, Windows 10 version 1803 x86" WinNT64Versions="Windows XP SP2 x64, Windows Server 2003 SP2 x64, Windows Vista x64, Windows Server 2008 x64, Windows 7 RTM x64, Windows Server 2008 R2 RTM x64, Windows 10 version 1511 x64, Windows 10 version 1607 x64, Windows 10 version 1703 x64, Windows 10 version 1709 x64, Windows 10 version 1803 x64, Windows Server 2016 x64" Operator="1" NoUiComLine="/q /norestart" Options="xy" TargetName=".NET Framework 4.6.1\NDP461-KB3102436-x86-x64-AllOS-ENU.exe"/>
+    <ATTRIBUTE name="PrereqsOrder" value="FDE9FBF14C64382AEFB5867591829B2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="FDE9FBF14C64382AEFB5867591829B2Rele" Prereq="FDE9FBF14C64382AEFB5867591829B2" SearchType="9" SearchString="HKLM\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\Release" RefContent="G394270" Order="1" Property="PreReqSearch_FDE9FBF14C64382AEFB586"/>
+  </COMPONENT>
+</DOCUMENT>
