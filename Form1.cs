@@ -95,15 +95,51 @@ namespace HRFID_WinForm
 
         private void PlC_UI_Init_UI_Finished_Event()
         {
+            this.plC_Button_最高權限.Bool = false;
             SQLUI.SQL_DataGridView.SQL_Set_Properties(dBConfigClass.DB_Basic.DataBaseName, dBConfigClass.DB_Basic.UserName, dBConfigClass.DB_Basic.Password, dBConfigClass.DB_Basic.IP, dBConfigClass.DB_Basic.Port, dBConfigClass.DB_Basic.MySqlSslMode, this.FindForm());
 
             PLC_UI_Init.Set_PLC_ScreenPage(this.panel_Main, this.plC_ScreenPage_Main);
+            PLC_UI_Init.Set_PLC_ScreenPage(this.panel_設定, this.plC_ScreenPage_設定);
             PLC_UI_Init.Set_PLC_ScreenPage(this.panel_系統, this.plC_ScreenPage_系統);
+            this.plC_ScreenPage_Main.TabChangeEvent += PlC_ScreenPage_Main_TabChangeEvent;
 
+            this.Program_主畫面_Init();
             this.Program_系統_Init();
+            this.Program_設定_Init();
             this.Fcunction_Init();
 
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void PlC_ScreenPage_Main_TabChangeEvent(string PageText)
+        {
+            if (PageText == "主畫面")
+            {
+                str_主畫面_檢查感應_上次卡號 = "";
+
+            }
+            if(plC_ScreenPage_設定.PageText == "藥藍設定")
+            {
+                plC_Button_設定_藥藍設定_開始感應.Bool = false;
+                str_設定_藥藍設定_檢查感應_上次卡號 = "";
+                List<object[]> list_value = this.sqL_DataGridView_亮燈位置設定.SQL_GetAllRows(false);
+                List<string> list_str = new List<string>();
+                for (int i = 0; i < list_value.Count; i++)
+                {
+                    if (list_value[i][(int)enum_亮燈位置設定.IO_Index].StringToInt32() == -1) continue;
+                   
+                    string name = list_value[i][(int)enum_亮燈位置設定.名稱].ObjectToString();
+                    list_str.Add(name);
+                }
+                this.comboBox_藥蘭設定_選擇窗口.DataSource = list_str;
+
+                this.Invoke(new Action(delegate
+                {
+                    label_設定_藥藍設定_消磁感應區.Text = $"[等待感應]";
+                    label_設定_藥藍設定_消磁感應區.ForeColor = Color.Black;
+                    label_設定_藥藍設定_消磁感應區.BackColor = Color.GreenYellow;
+                }));
+            }
         }
 
 

@@ -22,11 +22,15 @@ namespace HRFID_WinForm
     {
         private void Fcunction_Init()
         {
+            this.plC_RJ_Button_檢查滅燈.MouseDownEvent += PlC_RJ_Button_檢查滅燈_MouseDownEvent;
             this.plC_UI_Init.Add_Method(sub_Function);
         }
+
+      
+
         private void sub_Function()
         {
-
+            this.sub_Program_檢查滅燈時間();
         }
 
         #region PLC_檢查滅燈時間
@@ -37,6 +41,7 @@ namespace HRFID_WinForm
         int cnt_Program_檢查滅燈時間 = 65534;
         void sub_Program_檢查滅燈時間()
         {
+            PLC_Device_檢查滅燈時間.Bool = true;
             if (cnt_Program_檢查滅燈時間 == 65534)
             {
                 this.MyTimer_檢查滅燈時間_結束延遲.StartTickTime(200);
@@ -74,11 +79,11 @@ namespace HRFID_WinForm
             {
                 if (Task_檢查滅燈時間 == null)
                 {
-                    Task_檢查滅燈時間 = new Task(new Action(delegate { }));
+                    Task_檢查滅燈時間 = new Task(new Action(delegate { PlC_RJ_Button_檢查滅燈_MouseDownEvent(null); }));
                 }
                 if (Task_檢查滅燈時間.Status == TaskStatus.RanToCompletion)
                 {
-                    Task_檢查滅燈時間 = new Task(new Action(delegate { }));
+                    Task_檢查滅燈時間 = new Task(new Action(delegate { PlC_RJ_Button_檢查滅燈_MouseDownEvent(null); }));
                 }
                 if (Task_檢查滅燈時間.Status == TaskStatus.Created)
                 {
@@ -89,11 +94,41 @@ namespace HRFID_WinForm
         }
 
 
+        #endregion
 
+        #region Event
+        private void PlC_RJ_Button_檢查滅燈_MouseDownEvent(MouseEventArgs mevent)
+        {
+            List<object[]> list_value = this.sqL_DataGridView_亮燈位置設定.SQL_GetAllRows(false);
+            List<object[]> list_value_replace = new List<object[]>();
+            List<Task> taskList = new List<Task>();
+            for (int i = 0; i < list_value.Count; i++)
+            {
+                DateTime dateTime_st = list_value[i][(int)enum_亮燈位置設定.最後亮燈時間].ToDateTimeString().StringToDateTime();
+                if (dateTime_st.ToDateString("/") == "1991/01/01") continue;
+                DateTime dateTime_end = DateTime.Now;
+                TimeSpan timeSpan = dateTime_end - dateTime_st;
+                int sec = (int)timeSpan.TotalSeconds;
+                int 滅燈延遲時間 = list_value[i][(int)enum_亮燈位置設定.滅燈延遲時間].StringToInt32();
+                string IP = list_value[i][(int)enum_亮燈位置設定.IP].ObjectToString();
+                int IO_Index = list_value[i][(int)enum_亮燈位置設定.IO_Index].StringToInt32();
+                
+                if (sec >= 滅燈延遲時間)
+                {
+                    list_value[i][(int)enum_亮燈位置設定.最後亮燈時間] = "1991/01/01";
+                    list_value_replace.Add(list_value[i]);
+                    Console.WriteLine($"檢查滅燈,同步滅燈 IP:{IP} IO_Index:{IO_Index}");
+                    taskList.Add(Task.Run(() =>
+                    {
+                        this.h_RFID_UI.Set_BlinkEnable(IP, 29030, IO_Index, false, 0);
+                    }));
+                }
 
+            }
+            Task.WhenAll(taskList);
+            if (list_value_replace.Count > 0) this.sqL_DataGridView_亮燈位置設定.SQL_ReplaceExtra(list_value_replace, false);
 
-
-
+        }
         #endregion
     }
 }
