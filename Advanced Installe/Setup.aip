@@ -52,7 +52,7 @@
     <ROW Component="DrawingClass.dll" ComponentId="{CBE22688-AD6C-44A1-B0EC-A23F76484283}" Directory_="APPDIR" Attributes="0" KeyPath="DrawingClass.dll"/>
     <ROW Component="FontAwesome.Sharp.dll" ComponentId="{2524A92C-2E96-4B43-9442-9FA56978EAC0}" Directory_="APPDIR" Attributes="0" KeyPath="FontAwesome.Sharp.dll"/>
     <ROW Component="HCGUI.dll" ComponentId="{785BB10E-411E-4B1C-B276-E5DE57245BF7}" Directory_="APPDIR" Attributes="0" KeyPath="HCGUI.dll"/>
-    <ROW Component="HRFID_WinForm.exe" ComponentId="{55A7BD4E-2BC3-4D9E-8017-212641B7D3B4}" Directory_="APPDIR" Attributes="0" KeyPath="HRFID_WinForm.pdb"/>
+    <ROW Component="HRFID_WinForm.exe" ComponentId="{55A7BD4E-2BC3-4D9E-8017-212641B7D3B4}" Directory_="APPDIR" Attributes="0" KeyPath="HRFID_WinForm.pdb" Type="4"/>
     <ROW Component="H_Pannel_lib.dll" ComponentId="{0037E293-1FA7-42F3-AF0F-8443B7EAB895}" Directory_="APPDIR" Attributes="0" KeyPath="H_Pannel_lib.dll"/>
     <ROW Component="LadderUI.dll" ComponentId="{26D34606-C77B-4970-9F2D-24DDB5FF8A72}" Directory_="APPDIR" Attributes="0" KeyPath="LadderUI.dll"/>
     <ROW Component="LeadShineUI.dll" ComponentId="{90DFAFED-6DCF-4210-90BD-596A2DE2960C}" Directory_="APPDIR" Attributes="0" KeyPath="LeadShineUI.dll"/>
@@ -98,8 +98,7 @@
     <ROW File="AxOvkMsr.dll" Component_="AxOvkMsr.dll" FileName="AxOvkMsr.dll" Attributes="0" SourcePath="..\bin\Release\AxOvkMsr.dll" SelfReg="false" NextFile="Basic.dll"/>
     <ROW File="Basic.dll" Component_="Basic.dll" FileName="Basic.dll" Attributes="0" SourcePath="..\bin\Release\Basic.dll" SelfReg="false" NextFile="CallBackUI.dll"/>
     <ROW File="CallBackUI.dll" Component_="CallBackUI.dll" FileName="CALLBA~1.DLL|CallBackUI.dll" Attributes="0" SourcePath="..\bin\Release\CallBackUI.dll" SelfReg="false" NextFile="DBConfig.txt"/>
-    <ROW File="DBConfig.txt" Component_="DBConfig.txt" FileName="DBConfig.txt" Attributes="0" SourcePath="..\bin\Release\DBConfig.txt" SelfReg="false" NextFile="Device.val"/>
-    <ROW File="Device.val" Component_="DBConfig.txt" FileName="Device.val" Attributes="0" SourcePath="..\bin\Release\Device.val" SelfReg="false" NextFile="DrawingClass.dll"/>
+    <ROW File="DBConfig.txt" Component_="DBConfig.txt" FileName="DBConfig.txt" Attributes="0" SourcePath="..\bin\Release\DBConfig.txt" SelfReg="false" NextFile="DrawingClass.dll"/>
     <ROW File="DrawingClass.dll" Component_="DrawingClass.dll" FileName="DRAWIN~1.DLL|DrawingClass.dll" Attributes="0" SourcePath="..\bin\Release\DrawingClass.dll" SelfReg="false" NextFile="FontAwesome.Sharp.dll"/>
     <ROW File="FontAwesome.Sharp.dll" Component_="FontAwesome.Sharp.dll" FileName="FONTAW~1.DLL|FontAwesome.Sharp.dll" Attributes="0" SourcePath="..\bin\Release\FontAwesome.Sharp.dll" SelfReg="false" NextFile="FtpConfig.txt"/>
     <ROW File="FtpConfig.txt" Component_="DBConfig.txt" FileName="FTPCON~1.TXT|FtpConfig.txt" Attributes="0" SourcePath="..\bin\Release\FtpConfig.txt" SelfReg="false" NextFile="H_Pannel_lib.dll"/>
