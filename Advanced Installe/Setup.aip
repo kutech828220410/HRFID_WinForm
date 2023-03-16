@@ -18,10 +18,10 @@
     <ROW Property="AiSkipExitDlg" Value="1"/>
     <ROW Property="CTRLS" Value="2"/>
     <ROW Property="Manufacturer" Value="力翔精密機械有限公司"/>
-    <ROW Property="ProductCode" Value="1028:{A78645F7-A6A1-4245-92D5-8EDE8F764B3D} " Type="16"/>
+    <ROW Property="ProductCode" Value="1028:{37A78D23-F511-4008-A2A7-BB3D32111825} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1028"/>
     <ROW Property="ProductName" Value="自動輸送帶智慧通報系統"/>
-    <ROW Property="ProductVersion" Value="1.0.0.0" Type="32" TargetFile="_.exe"/>
+    <ROW Property="ProductVersion" Value="1.0.8.0" Type="32" TargetFile="_.exe"/>
     <ROW Property="RUNAPPLICATION" Value="1" Type="4"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{9E8E570F-0E09-4BCD-A3D4-0EE2FFDFC180}"/>

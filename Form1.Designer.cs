@@ -44,6 +44,7 @@ namespace HRFID_WinForm
             this.plC_RJ_ScreenButton143 = new MyUI.PLC_RJ_ScreenButton();
             this.plC_ScreenPage_Main = new MyUI.PLC_ScreenPage();
             this.主畫面 = new System.Windows.Forms.TabPage();
+            this.plC_RJ_Button_主畫面_檢查UI = new MyUI.PLC_RJ_Button();
             this.plC_RJ_Button_主畫面_檢查亮燈 = new MyUI.PLC_RJ_Button();
             this.rJ_Pannel5 = new MyUI.RJ_Pannel();
             this.C_01 = new MyUI.RJ_Lable();
@@ -72,12 +73,14 @@ namespace HRFID_WinForm
             this.系統 = new System.Windows.Forms.TabPage();
             this.plC_ScreenPage_系統 = new MyUI.PLC_ScreenPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.plC_RJ_Button_系統更新 = new MyUI.PLC_RJ_Button();
+            this.ftp_DounloadUI = new MyFtpUI.Ftp_DounloadUI();
             this.plC_Button_最高權限 = new MyUI.PLC_Button();
             this.plC_UI_Init = new MyUI.PLC_UI_Init();
             this.lowerMachine_Panel1 = new LadderUI.LowerMachine_Panel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.plC_RJ_Button_h_RFID_Datas_刷新 = new MyUI.PLC_RJ_Button();
-            this.sqL_DataGridView_h_RFID_Datas = new SQLUI.SQL_DataGridView();
             this.h_RFID_UI = new H_Pannel_lib.H_RFID_UI();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.plC_RJ_Button_檢查滅燈 = new MyUI.PLC_RJ_Button();
@@ -109,10 +112,15 @@ namespace HRFID_WinForm
             this.plC_RJ_ScreenButton3 = new MyUI.PLC_RJ_ScreenButton();
             this.plC_RJ_ScreenButton1 = new MyUI.PLC_RJ_ScreenButton();
             this.plC_RJ_ScreenButton2 = new MyUI.PLC_RJ_ScreenButton();
-            this.plC_RJ_Button_主畫面_檢查UI = new MyUI.PLC_RJ_Button();
-            this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.plC_RJ_Button_系統更新 = new MyUI.PLC_RJ_Button();
-            this.ftp_DounloadUI = new MyFtpUI.Ftp_DounloadUI();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.sqL_DataGridView_h_RFID_Datas = new SQLUI.SQL_DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.plC_NumBox_訊號強度 = new MyUI.PLC_NumBox();
             this.panel_Main.SuspendLayout();
             this.panel232.SuspendLayout();
             this.plC_ScreenPage_Main.SuspendLayout();
@@ -131,6 +139,7 @@ namespace HRFID_WinForm
             this.系統.SuspendLayout();
             this.plC_ScreenPage_系統.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox26.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.rJ_Pannel4.SuspendLayout();
@@ -139,7 +148,6 @@ namespace HRFID_WinForm
             this.rJ_Pannel2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel_系統.SuspendLayout();
-            this.groupBox26.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_Main
@@ -496,6 +504,7 @@ namespace HRFID_WinForm
             // 主畫面
             // 
             this.主畫面.BackColor = System.Drawing.Color.White;
+            this.主畫面.Controls.Add(this.sqL_DataGridView_h_RFID_Datas);
             this.主畫面.Controls.Add(this.plC_RJ_Button_主畫面_檢查UI);
             this.主畫面.Controls.Add(this.plC_RJ_Button_主畫面_檢查亮燈);
             this.主畫面.Controls.Add(this.rJ_Pannel5);
@@ -505,6 +514,48 @@ namespace HRFID_WinForm
             this.主畫面.Size = new System.Drawing.Size(1656, 1012);
             this.主畫面.TabIndex = 0;
             this.主畫面.Text = "主畫面";
+            // 
+            // plC_RJ_Button_主畫面_檢查UI
+            // 
+            this.plC_RJ_Button_主畫面_檢查UI.AutoResetState = false;
+            this.plC_RJ_Button_主畫面_檢查UI.BackgroundColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_主畫面_檢查UI.Bool = false;
+            this.plC_RJ_Button_主畫面_檢查UI.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_主畫面_檢查UI.BorderRadius = 5;
+            this.plC_RJ_Button_主畫面_檢查UI.BorderSize = 0;
+            this.plC_RJ_Button_主畫面_檢查UI.but_press = false;
+            this.plC_RJ_Button_主畫面_檢查UI.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button_主畫面_檢查UI.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button_主畫面_檢查UI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button_主畫面_檢查UI.Font = new System.Drawing.Font("微軟正黑體", 14F);
+            this.plC_RJ_Button_主畫面_檢查UI.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button_主畫面_檢查UI.Location = new System.Drawing.Point(1427, 861);
+            this.plC_RJ_Button_主畫面_檢查UI.Name = "plC_RJ_Button_主畫面_檢查UI";
+            this.plC_RJ_Button_主畫面_檢查UI.OFF_文字內容 = "檢查UI";
+            this.plC_RJ_Button_主畫面_檢查UI.OFF_文字字體 = new System.Drawing.Font("微軟正黑體", 14F);
+            this.plC_RJ_Button_主畫面_檢查UI.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button_主畫面_檢查UI.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_主畫面_檢查UI.ON_文字內容 = "檢查UI";
+            this.plC_RJ_Button_主畫面_檢查UI.ON_文字字體 = new System.Drawing.Font("微軟正黑體", 14F);
+            this.plC_RJ_Button_主畫面_檢查UI.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button_主畫面_檢查UI.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_主畫面_檢查UI.Size = new System.Drawing.Size(166, 67);
+            this.plC_RJ_Button_主畫面_檢查UI.State = false;
+            this.plC_RJ_Button_主畫面_檢查UI.TabIndex = 142;
+            this.plC_RJ_Button_主畫面_檢查UI.Text = "檢查UI";
+            this.plC_RJ_Button_主畫面_檢查UI.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button_主畫面_檢查UI.Texts = "檢查UI";
+            this.plC_RJ_Button_主畫面_檢查UI.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button_主畫面_檢查UI.字型鎖住 = false;
+            this.plC_RJ_Button_主畫面_檢查UI.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button_主畫面_檢查UI.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button_主畫面_檢查UI.文字鎖住 = false;
+            this.plC_RJ_Button_主畫面_檢查UI.讀取位元反向 = false;
+            this.plC_RJ_Button_主畫面_檢查UI.讀寫鎖住 = false;
+            this.plC_RJ_Button_主畫面_檢查UI.音效 = true;
+            this.plC_RJ_Button_主畫面_檢查UI.顯示 = false;
+            this.plC_RJ_Button_主畫面_檢查UI.顯示狀態 = false;
+            this.plC_RJ_Button_主畫面_檢查UI.顯示讀取位置 = "S4077";
             // 
             // plC_RJ_Button_主畫面_檢查亮燈
             // 
@@ -554,6 +605,13 @@ namespace HRFID_WinForm
             this.rJ_Pannel5.BorderColor = System.Drawing.Color.MidnightBlue;
             this.rJ_Pannel5.BorderRadius = 10;
             this.rJ_Pannel5.BorderSize = 2;
+            this.rJ_Pannel5.Controls.Add(this.label9);
+            this.rJ_Pannel5.Controls.Add(this.label8);
+            this.rJ_Pannel5.Controls.Add(this.label7);
+            this.rJ_Pannel5.Controls.Add(this.label6);
+            this.rJ_Pannel5.Controls.Add(this.label5);
+            this.rJ_Pannel5.Controls.Add(this.label4);
+            this.rJ_Pannel5.Controls.Add(this.label3);
             this.rJ_Pannel5.Controls.Add(this.C_01);
             this.rJ_Pannel5.Controls.Add(this.C_02);
             this.rJ_Pannel5.Controls.Add(this.panel1);
@@ -701,7 +759,7 @@ namespace HRFID_WinForm
             this.rJ_GroupBox1.ContentsPanel.IsSelected = false;
             this.rJ_GroupBox1.ContentsPanel.Location = new System.Drawing.Point(0, 37);
             this.rJ_GroupBox1.ContentsPanel.Name = "ContentsPanel";
-            this.rJ_GroupBox1.ContentsPanel.Size = new System.Drawing.Size(786, 329);
+            this.rJ_GroupBox1.ContentsPanel.Size = new System.Drawing.Size(1087, 329);
             this.rJ_GroupBox1.ContentsPanel.TabIndex = 2;
             this.rJ_GroupBox1.Location = new System.Drawing.Point(3, 638);
             this.rJ_GroupBox1.Name = "rJ_GroupBox1";
@@ -709,7 +767,7 @@ namespace HRFID_WinForm
             this.rJ_GroupBox1.PannelBorderColor = System.Drawing.Color.Blue;
             this.rJ_GroupBox1.PannelBorderRadius = 5;
             this.rJ_GroupBox1.PannelBorderSize = 2;
-            this.rJ_GroupBox1.Size = new System.Drawing.Size(786, 366);
+            this.rJ_GroupBox1.Size = new System.Drawing.Size(1087, 366);
             this.rJ_GroupBox1.TabIndex = 0;
             this.rJ_GroupBox1.TitleBackColor = System.Drawing.Color.Blue;
             this.rJ_GroupBox1.TitleBorderColor = System.Drawing.Color.PaleVioletRed;
@@ -771,7 +829,7 @@ namespace HRFID_WinForm
             this.label_主畫面_消磁感應區.ForeColor = System.Drawing.Color.Black;
             this.label_主畫面_消磁感應區.Location = new System.Drawing.Point(0, 0);
             this.label_主畫面_消磁感應區.Name = "label_主畫面_消磁感應區";
-            this.label_主畫面_消磁感應區.Size = new System.Drawing.Size(786, 329);
+            this.label_主畫面_消磁感應區.Size = new System.Drawing.Size(1087, 329);
             this.label_主畫面_消磁感應區.TabIndex = 1;
             this.label_主畫面_消磁感應區.Text = "[等待感應]";
             this.label_主畫面_消磁感應區.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1065,6 +1123,7 @@ namespace HRFID_WinForm
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Controls.Add(this.plC_NumBox_訊號強度);
             this.tabPage1.Controls.Add(this.groupBox26);
             this.tabPage1.Controls.Add(this.plC_Button_最高權限);
             this.tabPage1.Controls.Add(this.plC_UI_Init);
@@ -1074,6 +1133,76 @@ namespace HRFID_WinForm
             this.tabPage1.Size = new System.Drawing.Size(1648, 932);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "系統";
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.Controls.Add(this.plC_RJ_Button_系統更新);
+            this.groupBox26.Controls.Add(this.ftp_DounloadUI);
+            this.groupBox26.Location = new System.Drawing.Point(904, 50);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(641, 278);
+            this.groupBox26.TabIndex = 110;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "系統更新";
+            this.groupBox26.Visible = false;
+            // 
+            // plC_RJ_Button_系統更新
+            // 
+            this.plC_RJ_Button_系統更新.AutoResetState = false;
+            this.plC_RJ_Button_系統更新.BackgroundColor = System.Drawing.Color.RoyalBlue;
+            this.plC_RJ_Button_系統更新.Bool = false;
+            this.plC_RJ_Button_系統更新.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.plC_RJ_Button_系統更新.BorderRadius = 20;
+            this.plC_RJ_Button_系統更新.BorderSize = 0;
+            this.plC_RJ_Button_系統更新.but_press = false;
+            this.plC_RJ_Button_系統更新.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
+            this.plC_RJ_Button_系統更新.FlatAppearance.BorderSize = 0;
+            this.plC_RJ_Button_系統更新.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.plC_RJ_Button_系統更新.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.plC_RJ_Button_系統更新.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
+            this.plC_RJ_Button_系統更新.Location = new System.Drawing.Point(480, 211);
+            this.plC_RJ_Button_系統更新.Name = "plC_RJ_Button_系統更新";
+            this.plC_RJ_Button_系統更新.OFF_文字內容 = "系統更新";
+            this.plC_RJ_Button_系統更新.OFF_文字字體 = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.plC_RJ_Button_系統更新.OFF_文字顏色 = System.Drawing.Color.White;
+            this.plC_RJ_Button_系統更新.OFF_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_系統更新.ON_文字內容 = "系統更新";
+            this.plC_RJ_Button_系統更新.ON_文字字體 = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.plC_RJ_Button_系統更新.ON_文字顏色 = System.Drawing.Color.Black;
+            this.plC_RJ_Button_系統更新.ON_背景顏色 = System.Drawing.SystemColors.Control;
+            this.plC_RJ_Button_系統更新.Size = new System.Drawing.Size(155, 61);
+            this.plC_RJ_Button_系統更新.State = false;
+            this.plC_RJ_Button_系統更新.TabIndex = 123;
+            this.plC_RJ_Button_系統更新.Text = "系統更新";
+            this.plC_RJ_Button_系統更新.TextColor = System.Drawing.Color.White;
+            this.plC_RJ_Button_系統更新.UseVisualStyleBackColor = false;
+            this.plC_RJ_Button_系統更新.字型鎖住 = false;
+            this.plC_RJ_Button_系統更新.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
+            this.plC_RJ_Button_系統更新.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
+            this.plC_RJ_Button_系統更新.文字鎖住 = false;
+            this.plC_RJ_Button_系統更新.致能讀取位置 = "S39019";
+            this.plC_RJ_Button_系統更新.讀取位元反向 = false;
+            this.plC_RJ_Button_系統更新.讀寫鎖住 = false;
+            this.plC_RJ_Button_系統更新.音效 = true;
+            this.plC_RJ_Button_系統更新.顯示 = false;
+            this.plC_RJ_Button_系統更新.顯示狀態 = false;
+            // 
+            // ftp_DounloadUI
+            // 
+            this.ftp_DounloadUI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ftp_DounloadUI.DownloadType = MyFtpUI.Ftp_DounloadUI.E_DownloadType.URL;
+            this.ftp_DounloadUI.FileName = "Setup.msi";
+            this.ftp_DounloadUI.FTP_Groupbox_要顯示 = false;
+            this.ftp_DounloadUI.FTP_Server = "ftp://kutech.myds.me/FTP";
+            this.ftp_DounloadUI.FTP_Server_要顯示 = false;
+            this.ftp_DounloadUI.Location = new System.Drawing.Point(6, 26);
+            this.ftp_DounloadUI.Name = "ftp_DounloadUI";
+            this.ftp_DounloadUI.Password = "test";
+            this.ftp_DounloadUI.Password_要顯示 = false;
+            this.ftp_DounloadUI.Size = new System.Drawing.Size(431, 246);
+            this.ftp_DounloadUI.TabIndex = 12;
+            this.ftp_DounloadUI.Username = "test";
+            this.ftp_DounloadUI.Username_要顯示 = false;
             // 
             // plC_Button_最高權限
             // 
@@ -1137,7 +1266,6 @@ namespace HRFID_WinForm
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.Controls.Add(this.plC_RJ_Button_h_RFID_Datas_刷新);
-            this.tabPage2.Controls.Add(this.sqL_DataGridView_h_RFID_Datas);
             this.tabPage2.Controls.Add(this.h_RFID_UI);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -1186,56 +1314,6 @@ namespace HRFID_WinForm
             this.plC_RJ_Button_h_RFID_Datas_刷新.顯示 = false;
             this.plC_RJ_Button_h_RFID_Datas_刷新.顯示狀態 = false;
             this.plC_RJ_Button_h_RFID_Datas_刷新.顯示讀取位置 = "S4077";
-            // 
-            // sqL_DataGridView_h_RFID_Datas
-            // 
-            this.sqL_DataGridView_h_RFID_Datas.AutoSelectToDeep = true;
-            this.sqL_DataGridView_h_RFID_Datas.backColor = System.Drawing.Color.LightBlue;
-            this.sqL_DataGridView_h_RFID_Datas.BorderColor = System.Drawing.Color.LightBlue;
-            this.sqL_DataGridView_h_RFID_Datas.BorderRadius = 10;
-            this.sqL_DataGridView_h_RFID_Datas.BorderSize = 2;
-            this.sqL_DataGridView_h_RFID_Datas.cellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.sqL_DataGridView_h_RFID_Datas.cellStylBackColor = System.Drawing.Color.LightBlue;
-            this.sqL_DataGridView_h_RFID_Datas.cellStyleFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.sqL_DataGridView_h_RFID_Datas.cellStylForeColor = System.Drawing.Color.Black;
-            this.sqL_DataGridView_h_RFID_Datas.columnHeaderBackColor = System.Drawing.Color.SkyBlue;
-            this.sqL_DataGridView_h_RFID_Datas.columnHeaderFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
-            this.sqL_DataGridView_h_RFID_Datas.columnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.sqL_DataGridView_h_RFID_Datas.columnHeadersHeight = 23;
-            this.sqL_DataGridView_h_RFID_Datas.columnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sqL_DataGridView_h_RFID_Datas.Columns.Add(((SQLUI.SQL_DataGridView.ColumnElement)(resources.GetObject("sqL_DataGridView_h_RFID_Datas.Columns"))));
-            this.sqL_DataGridView_h_RFID_Datas.Columns.Add(((SQLUI.SQL_DataGridView.ColumnElement)(resources.GetObject("sqL_DataGridView_h_RFID_Datas.Columns1"))));
-            this.sqL_DataGridView_h_RFID_Datas.Columns.Add(((SQLUI.SQL_DataGridView.ColumnElement)(resources.GetObject("sqL_DataGridView_h_RFID_Datas.Columns2"))));
-            this.sqL_DataGridView_h_RFID_Datas.Columns.Add(((SQLUI.SQL_DataGridView.ColumnElement)(resources.GetObject("sqL_DataGridView_h_RFID_Datas.Columns3"))));
-            this.sqL_DataGridView_h_RFID_Datas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sqL_DataGridView_h_RFID_Datas.Font = new System.Drawing.Font("新細明體", 9F);
-            this.sqL_DataGridView_h_RFID_Datas.ImageBox = false;
-            this.sqL_DataGridView_h_RFID_Datas.Location = new System.Drawing.Point(1126, 0);
-            this.sqL_DataGridView_h_RFID_Datas.Name = "sqL_DataGridView_h_RFID_Datas";
-            this.sqL_DataGridView_h_RFID_Datas.OnlineState = SQLUI.SQL_DataGridView.OnlineEnum.Online;
-            this.sqL_DataGridView_h_RFID_Datas.Password = "user82822040";
-            this.sqL_DataGridView_h_RFID_Datas.Port = ((uint)(3306u));
-            this.sqL_DataGridView_h_RFID_Datas.rowHeaderBackColor = System.Drawing.Color.LightBlue;
-            this.sqL_DataGridView_h_RFID_Datas.rowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.sqL_DataGridView_h_RFID_Datas.RowsColor = System.Drawing.SystemColors.Control;
-            this.sqL_DataGridView_h_RFID_Datas.RowsHeight = 30;
-            this.sqL_DataGridView_h_RFID_Datas.SaveFileName = "SQL_DataGridView";
-            this.sqL_DataGridView_h_RFID_Datas.Server = "127.0.0.0";
-            this.sqL_DataGridView_h_RFID_Datas.Size = new System.Drawing.Size(522, 545);
-            this.sqL_DataGridView_h_RFID_Datas.SSLMode = MySql.Data.MySqlClient.MySqlSslMode.None;
-            this.sqL_DataGridView_h_RFID_Datas.TabIndex = 43;
-            this.sqL_DataGridView_h_RFID_Datas.UserName = "root";
-            this.sqL_DataGridView_h_RFID_Datas.可拖曳欄位寬度 = false;
-            this.sqL_DataGridView_h_RFID_Datas.可選擇多列 = false;
-            this.sqL_DataGridView_h_RFID_Datas.單格樣式 = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.sqL_DataGridView_h_RFID_Datas.自動換行 = true;
-            this.sqL_DataGridView_h_RFID_Datas.表單字體 = new System.Drawing.Font("新細明體", 9F);
-            this.sqL_DataGridView_h_RFID_Datas.邊框樣式 = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.sqL_DataGridView_h_RFID_Datas.顯示CheckBox = false;
-            this.sqL_DataGridView_h_RFID_Datas.顯示首列 = true;
-            this.sqL_DataGridView_h_RFID_Datas.顯示首行 = true;
-            this.sqL_DataGridView_h_RFID_Datas.首列樣式 = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.sqL_DataGridView_h_RFID_Datas.首行樣式 = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             // 
             // h_RFID_UI
             // 
@@ -2124,117 +2202,151 @@ namespace HRFID_WinForm
             this.plC_RJ_ScreenButton2.顯示狀態 = false;
             this.plC_RJ_ScreenButton2.顯示讀取位置 = "";
             // 
-            // plC_RJ_Button_主畫面_檢查UI
+            // label3
             // 
-            this.plC_RJ_Button_主畫面_檢查UI.AutoResetState = false;
-            this.plC_RJ_Button_主畫面_檢查UI.BackgroundColor = System.Drawing.Color.PaleVioletRed;
-            this.plC_RJ_Button_主畫面_檢查UI.Bool = false;
-            this.plC_RJ_Button_主畫面_檢查UI.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.plC_RJ_Button_主畫面_檢查UI.BorderRadius = 5;
-            this.plC_RJ_Button_主畫面_檢查UI.BorderSize = 0;
-            this.plC_RJ_Button_主畫面_檢查UI.but_press = false;
-            this.plC_RJ_Button_主畫面_檢查UI.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
-            this.plC_RJ_Button_主畫面_檢查UI.FlatAppearance.BorderSize = 0;
-            this.plC_RJ_Button_主畫面_檢查UI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plC_RJ_Button_主畫面_檢查UI.Font = new System.Drawing.Font("微軟正黑體", 14F);
-            this.plC_RJ_Button_主畫面_檢查UI.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
-            this.plC_RJ_Button_主畫面_檢查UI.Location = new System.Drawing.Point(1427, 861);
-            this.plC_RJ_Button_主畫面_檢查UI.Name = "plC_RJ_Button_主畫面_檢查UI";
-            this.plC_RJ_Button_主畫面_檢查UI.OFF_文字內容 = "檢查UI";
-            this.plC_RJ_Button_主畫面_檢查UI.OFF_文字字體 = new System.Drawing.Font("微軟正黑體", 14F);
-            this.plC_RJ_Button_主畫面_檢查UI.OFF_文字顏色 = System.Drawing.Color.White;
-            this.plC_RJ_Button_主畫面_檢查UI.OFF_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_主畫面_檢查UI.ON_文字內容 = "檢查UI";
-            this.plC_RJ_Button_主畫面_檢查UI.ON_文字字體 = new System.Drawing.Font("微軟正黑體", 14F);
-            this.plC_RJ_Button_主畫面_檢查UI.ON_文字顏色 = System.Drawing.Color.Black;
-            this.plC_RJ_Button_主畫面_檢查UI.ON_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_主畫面_檢查UI.Size = new System.Drawing.Size(166, 67);
-            this.plC_RJ_Button_主畫面_檢查UI.State = false;
-            this.plC_RJ_Button_主畫面_檢查UI.TabIndex = 142;
-            this.plC_RJ_Button_主畫面_檢查UI.Text = "檢查UI";
-            this.plC_RJ_Button_主畫面_檢查UI.TextColor = System.Drawing.Color.White;
-            this.plC_RJ_Button_主畫面_檢查UI.Texts = "檢查UI";
-            this.plC_RJ_Button_主畫面_檢查UI.UseVisualStyleBackColor = false;
-            this.plC_RJ_Button_主畫面_檢查UI.字型鎖住 = false;
-            this.plC_RJ_Button_主畫面_檢查UI.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
-            this.plC_RJ_Button_主畫面_檢查UI.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
-            this.plC_RJ_Button_主畫面_檢查UI.文字鎖住 = false;
-            this.plC_RJ_Button_主畫面_檢查UI.讀取位元反向 = false;
-            this.plC_RJ_Button_主畫面_檢查UI.讀寫鎖住 = false;
-            this.plC_RJ_Button_主畫面_檢查UI.音效 = true;
-            this.plC_RJ_Button_主畫面_檢查UI.顯示 = false;
-            this.plC_RJ_Button_主畫面_檢查UI.顯示狀態 = false;
-            this.plC_RJ_Button_主畫面_檢查UI.顯示讀取位置 = "S4077";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Location = new System.Drawing.Point(1185, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 30);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "A01";
             // 
-            // groupBox26
+            // label4
             // 
-            this.groupBox26.Controls.Add(this.plC_RJ_Button_系統更新);
-            this.groupBox26.Controls.Add(this.ftp_DounloadUI);
-            this.groupBox26.Location = new System.Drawing.Point(904, 50);
-            this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(641, 278);
-            this.groupBox26.TabIndex = 110;
-            this.groupBox26.TabStop = false;
-            this.groupBox26.Text = "系統更新";
-            this.groupBox26.Visible = false;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(1185, 306);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 30);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "A02";
             // 
-            // plC_RJ_Button_系統更新
+            // label5
             // 
-            this.plC_RJ_Button_系統更新.AutoResetState = false;
-            this.plC_RJ_Button_系統更新.BackgroundColor = System.Drawing.Color.RoyalBlue;
-            this.plC_RJ_Button_系統更新.Bool = false;
-            this.plC_RJ_Button_系統更新.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.plC_RJ_Button_系統更新.BorderRadius = 20;
-            this.plC_RJ_Button_系統更新.BorderSize = 0;
-            this.plC_RJ_Button_系統更新.but_press = false;
-            this.plC_RJ_Button_系統更新.buttonType = MyUI.RJ_Button.ButtonType.Toggle;
-            this.plC_RJ_Button_系統更新.FlatAppearance.BorderSize = 0;
-            this.plC_RJ_Button_系統更新.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.plC_RJ_Button_系統更新.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.plC_RJ_Button_系統更新.Icon = System.Windows.Forms.MessageBoxIcon.Warning;
-            this.plC_RJ_Button_系統更新.Location = new System.Drawing.Point(480, 211);
-            this.plC_RJ_Button_系統更新.Name = "plC_RJ_Button_系統更新";
-            this.plC_RJ_Button_系統更新.OFF_文字內容 = "系統更新";
-            this.plC_RJ_Button_系統更新.OFF_文字字體 = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.plC_RJ_Button_系統更新.OFF_文字顏色 = System.Drawing.Color.White;
-            this.plC_RJ_Button_系統更新.OFF_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_系統更新.ON_文字內容 = "系統更新";
-            this.plC_RJ_Button_系統更新.ON_文字字體 = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.plC_RJ_Button_系統更新.ON_文字顏色 = System.Drawing.Color.Black;
-            this.plC_RJ_Button_系統更新.ON_背景顏色 = System.Drawing.SystemColors.Control;
-            this.plC_RJ_Button_系統更新.Size = new System.Drawing.Size(155, 61);
-            this.plC_RJ_Button_系統更新.State = false;
-            this.plC_RJ_Button_系統更新.TabIndex = 123;
-            this.plC_RJ_Button_系統更新.Text = "系統更新";
-            this.plC_RJ_Button_系統更新.TextColor = System.Drawing.Color.White;
-            this.plC_RJ_Button_系統更新.UseVisualStyleBackColor = false;
-            this.plC_RJ_Button_系統更新.字型鎖住 = false;
-            this.plC_RJ_Button_系統更新.按鈕型態 = MyUI.PLC_RJ_Button.StatusEnum.保持型;
-            this.plC_RJ_Button_系統更新.按鍵方式 = MyUI.PLC_RJ_Button.PressEnum.Mouse_左鍵;
-            this.plC_RJ_Button_系統更新.文字鎖住 = false;
-            this.plC_RJ_Button_系統更新.致能讀取位置 = "S39019";
-            this.plC_RJ_Button_系統更新.讀取位元反向 = false;
-            this.plC_RJ_Button_系統更新.讀寫鎖住 = false;
-            this.plC_RJ_Button_系統更新.音效 = true;
-            this.plC_RJ_Button_系統更新.顯示 = false;
-            this.plC_RJ_Button_系統更新.顯示狀態 = false;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Black;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Location = new System.Drawing.Point(705, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 30);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "B01";
             // 
-            // ftp_DounloadUI
+            // label6
             // 
-            this.ftp_DounloadUI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ftp_DounloadUI.DownloadType = MyFtpUI.Ftp_DounloadUI.E_DownloadType.URL;
-            this.ftp_DounloadUI.FileName = "Setup.msi";
-            this.ftp_DounloadUI.FTP_Groupbox_要顯示 = false;
-            this.ftp_DounloadUI.FTP_Server = "ftp://kutech.myds.me/FTP";
-            this.ftp_DounloadUI.FTP_Server_要顯示 = false;
-            this.ftp_DounloadUI.Location = new System.Drawing.Point(6, 26);
-            this.ftp_DounloadUI.Name = "ftp_DounloadUI";
-            this.ftp_DounloadUI.Password = "test";
-            this.ftp_DounloadUI.Password_要顯示 = false;
-            this.ftp_DounloadUI.Size = new System.Drawing.Size(431, 246);
-            this.ftp_DounloadUI.TabIndex = 12;
-            this.ftp_DounloadUI.Username = "test";
-            this.ftp_DounloadUI.Username_要顯示 = false;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Location = new System.Drawing.Point(705, 306);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(56, 30);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "B02";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Black;
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.Location = new System.Drawing.Point(225, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(57, 30);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "C01";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Black;
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.Location = new System.Drawing.Point(224, 306);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 30);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "C02";
+            // 
+            // sqL_DataGridView_h_RFID_Datas
+            // 
+            this.sqL_DataGridView_h_RFID_Datas.AutoSelectToDeep = true;
+            this.sqL_DataGridView_h_RFID_Datas.backColor = System.Drawing.Color.LightBlue;
+            this.sqL_DataGridView_h_RFID_Datas.BorderColor = System.Drawing.Color.LightBlue;
+            this.sqL_DataGridView_h_RFID_Datas.BorderRadius = 10;
+            this.sqL_DataGridView_h_RFID_Datas.BorderSize = 2;
+            this.sqL_DataGridView_h_RFID_Datas.cellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.sqL_DataGridView_h_RFID_Datas.cellStylBackColor = System.Drawing.Color.LightBlue;
+            this.sqL_DataGridView_h_RFID_Datas.cellStyleFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.sqL_DataGridView_h_RFID_Datas.cellStylForeColor = System.Drawing.Color.Black;
+            this.sqL_DataGridView_h_RFID_Datas.columnHeaderBackColor = System.Drawing.Color.SkyBlue;
+            this.sqL_DataGridView_h_RFID_Datas.columnHeaderFont = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold);
+            this.sqL_DataGridView_h_RFID_Datas.columnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.sqL_DataGridView_h_RFID_Datas.columnHeadersHeight = 23;
+            this.sqL_DataGridView_h_RFID_Datas.columnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sqL_DataGridView_h_RFID_Datas.Columns.Add(((SQLUI.SQL_DataGridView.ColumnElement)(resources.GetObject("sqL_DataGridView_h_RFID_Datas.Columns"))));
+            this.sqL_DataGridView_h_RFID_Datas.Columns.Add(((SQLUI.SQL_DataGridView.ColumnElement)(resources.GetObject("sqL_DataGridView_h_RFID_Datas.Columns1"))));
+            this.sqL_DataGridView_h_RFID_Datas.Columns.Add(((SQLUI.SQL_DataGridView.ColumnElement)(resources.GetObject("sqL_DataGridView_h_RFID_Datas.Columns2"))));
+            this.sqL_DataGridView_h_RFID_Datas.Columns.Add(((SQLUI.SQL_DataGridView.ColumnElement)(resources.GetObject("sqL_DataGridView_h_RFID_Datas.Columns3"))));
+            this.sqL_DataGridView_h_RFID_Datas.Font = new System.Drawing.Font("新細明體", 9F);
+            this.sqL_DataGridView_h_RFID_Datas.ImageBox = false;
+            this.sqL_DataGridView_h_RFID_Datas.Location = new System.Drawing.Point(1096, 629);
+            this.sqL_DataGridView_h_RFID_Datas.Name = "sqL_DataGridView_h_RFID_Datas";
+            this.sqL_DataGridView_h_RFID_Datas.OnlineState = SQLUI.SQL_DataGridView.OnlineEnum.Online;
+            this.sqL_DataGridView_h_RFID_Datas.Password = "user82822040";
+            this.sqL_DataGridView_h_RFID_Datas.Port = ((uint)(3306u));
+            this.sqL_DataGridView_h_RFID_Datas.rowHeaderBackColor = System.Drawing.Color.LightBlue;
+            this.sqL_DataGridView_h_RFID_Datas.rowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.sqL_DataGridView_h_RFID_Datas.RowsColor = System.Drawing.SystemColors.Control;
+            this.sqL_DataGridView_h_RFID_Datas.RowsHeight = 30;
+            this.sqL_DataGridView_h_RFID_Datas.SaveFileName = "SQL_DataGridView";
+            this.sqL_DataGridView_h_RFID_Datas.Server = "127.0.0.0";
+            this.sqL_DataGridView_h_RFID_Datas.Size = new System.Drawing.Size(522, 372);
+            this.sqL_DataGridView_h_RFID_Datas.SSLMode = MySql.Data.MySqlClient.MySqlSslMode.None;
+            this.sqL_DataGridView_h_RFID_Datas.TabIndex = 143;
+            this.sqL_DataGridView_h_RFID_Datas.UserName = "root";
+            this.sqL_DataGridView_h_RFID_Datas.可拖曳欄位寬度 = false;
+            this.sqL_DataGridView_h_RFID_Datas.可選擇多列 = false;
+            this.sqL_DataGridView_h_RFID_Datas.單格樣式 = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.sqL_DataGridView_h_RFID_Datas.自動換行 = true;
+            this.sqL_DataGridView_h_RFID_Datas.表單字體 = new System.Drawing.Font("新細明體", 9F);
+            this.sqL_DataGridView_h_RFID_Datas.邊框樣式 = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.sqL_DataGridView_h_RFID_Datas.顯示CheckBox = false;
+            this.sqL_DataGridView_h_RFID_Datas.顯示首列 = true;
+            this.sqL_DataGridView_h_RFID_Datas.顯示首行 = true;
+            this.sqL_DataGridView_h_RFID_Datas.首列樣式 = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.sqL_DataGridView_h_RFID_Datas.首行樣式 = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Brown;
+            this.label9.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.Location = new System.Drawing.Point(1481, 155);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(58, 165);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "入口";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // plC_NumBox_訊號強度
+            // 
+            this.plC_NumBox_訊號強度.Location = new System.Drawing.Point(1021, 397);
+            this.plC_NumBox_訊號強度.mBackColor = System.Drawing.SystemColors.Window;
+            this.plC_NumBox_訊號強度.mForeColor = System.Drawing.SystemColors.WindowText;
+            this.plC_NumBox_訊號強度.Name = "plC_NumBox_訊號強度";
+            this.plC_NumBox_訊號強度.ReadOnly = false;
+            this.plC_NumBox_訊號強度.Size = new System.Drawing.Size(46, 22);
+            this.plC_NumBox_訊號強度.TabIndex = 111;
+            this.plC_NumBox_訊號強度.Value = 0;
+            this.plC_NumBox_訊號強度.字元長度 = MyUI.PLC_NumBox.WordLengthEnum.單字元;
+            this.plC_NumBox_訊號強度.密碼欄位 = false;
+            this.plC_NumBox_訊號強度.寫入元件位置 = "D3500";
+            this.plC_NumBox_訊號強度.小數點位置 = 0;
+            this.plC_NumBox_訊號強度.微調數值 = 1;
+            this.plC_NumBox_訊號強度.讀取元件位置 = "D3500";
+            this.plC_NumBox_訊號強度.音效 = true;
+            this.plC_NumBox_訊號強度.顯示微調按鈕 = false;
+            this.plC_NumBox_訊號強度.顯示螢幕小鍵盤 = true;
             // 
             // Form1
             // 
@@ -2254,6 +2366,7 @@ namespace HRFID_WinForm
             this.plC_ScreenPage_Main.ResumeLayout(false);
             this.主畫面.ResumeLayout(false);
             this.rJ_Pannel5.ResumeLayout(false);
+            this.rJ_Pannel5.PerformLayout();
             this.rJ_GroupBox1.ContentsPanel.ResumeLayout(false);
             this.rJ_GroupBox1.ResumeLayout(false);
             this.設定.ResumeLayout(false);
@@ -2268,6 +2381,7 @@ namespace HRFID_WinForm
             this.系統.ResumeLayout(false);
             this.plC_ScreenPage_系統.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox26.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.rJ_Pannel4.ResumeLayout(false);
@@ -2277,7 +2391,6 @@ namespace HRFID_WinForm
             this.rJ_Pannel2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.panel_系統.ResumeLayout(false);
-            this.groupBox26.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2350,7 +2463,6 @@ namespace HRFID_WinForm
         private System.Windows.Forms.Label label_設定_藥藍設定_消磁感應區;
         private MyUI.PLC_RJ_Button plC_RJ_Button_設定_藥藍設定_消磁感應區_檢查感應;
         private MyUI.PLC_Button plC_Button_最高權限;
-        private SQLUI.SQL_DataGridView sqL_DataGridView_h_RFID_Datas;
         private MyUI.PLC_RJ_Button plC_RJ_Button_h_RFID_Datas_刷新;
         private System.Windows.Forms.Label label_主畫面_消磁感應區;
         private MyUI.PLC_RJ_Button plC_RJ_Button_主畫面_檢查感應;
@@ -2367,6 +2479,15 @@ namespace HRFID_WinForm
         private System.Windows.Forms.GroupBox groupBox26;
         private MyUI.PLC_RJ_Button plC_RJ_Button_系統更新;
         private MyFtpUI.Ftp_DounloadUI ftp_DounloadUI;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private SQLUI.SQL_DataGridView sqL_DataGridView_h_RFID_Datas;
+        private System.Windows.Forms.Label label9;
+        private MyUI.PLC_NumBox plC_NumBox_訊號強度;
     }
 }
 

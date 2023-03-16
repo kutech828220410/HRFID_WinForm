@@ -86,6 +86,7 @@ namespace HRFID_WinForm
         void sub_Program_系統_h_RFID_Datas_刷新()
         {
             if (this.plC_ScreenPage_Main.PageText == "系統" && this.plC_ScreenPage_系統.PageText == "H_RFID") PLC_Device_系統_h_RFID_Datas_刷新.Bool = true;
+            if (this.plC_ScreenPage_Main.PageText == "主畫面") PLC_Device_系統_h_RFID_Datas_刷新.Bool = true;
             if (cnt_Program_系統_h_RFID_Datas_刷新 == 65534)
             {
                 this.MyTimer_系統_h_RFID_Datas_刷新_結束延遲.StartTickTime(100);
@@ -170,7 +171,8 @@ namespace HRFID_WinForm
                 value[(int)enum_H_RFID_Datas.IP] = rFID_UID_Classes[i].IP;
                 value[(int)enum_H_RFID_Datas.CardID] = rFID_UID_Classes[i].Card_ID;
                 value[(int)enum_H_RFID_Datas.RSSI] = rFID_UID_Classes[i].RSSI;
-                list_value.Add(value);
+                if (rFID_UID_Classes[i].RSSI >= -plC_NumBox_訊號強度.Value) list_value.Add(value);
+
             }
             List<H_RFID_UI.UDP_READ.BlinkEnable_Data> blinkEnable_Datas = this.h_RFID_UI.GetBlinkEnable();
   

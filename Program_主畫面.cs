@@ -304,26 +304,32 @@ namespace HRFID_WinForm
                 }));
                 return;
             }
-            if (str_主畫面_檢查感應_上次卡號 == CardID)
-            {
-                this.Invoke(new Action(delegate
-                {
-                    label_主畫面_消磁感應區.Text = $"[等待感應]";
-                    label_主畫面_消磁感應區.ForeColor = Color.Black;
-                    label_主畫面_消磁感應區.BackColor = Color.GreenYellow;
-                }));
-                return;
-            }
+            //if (str_主畫面_檢查感應_上次卡號 == CardID)
+            //{
+            //    this.Invoke(new Action(delegate
+            //    {
+            //        label_主畫面_消磁感應區.Text = $"[等待感應]";
+            //        label_主畫面_消磁感應區.ForeColor = Color.Black;
+            //        label_主畫面_消磁感應區.BackColor = Color.GreenYellow;
+            //    }));
+            //    return;
+            //}
             str_主畫面_檢查感應_上次卡號 = CardID;
+            List<object[]> list_藥藍資料 = this.sqL_DataGridView_藥藍資料.SQL_GetAllRows(false);
+            list_藥藍資料 = list_藥藍資料.GetRows((int)enum_藥藍資料.CardID, CardID);
+
             this.Invoke(new Action(delegate
             {
                 label_主畫面_消磁感應區.Text = $"卡號:[{CardID}]";
+                if(list_藥藍資料.Count > 0)
+                {
+                    label_主畫面_消磁感應區.Text += $"[{list_藥藍資料[0][(int)enum_藥藍資料.名稱].ObjectToString()}]";
+                }
                 label_主畫面_消磁感應區.ForeColor = Color.Black;
                 label_主畫面_消磁感應區.BackColor = Color.Yellow;
             }));
             System.Threading.Thread.Sleep(1000);
-            List<object[]> list_藥藍資料 = this.sqL_DataGridView_藥藍資料.SQL_GetAllRows(false);
-            list_藥藍資料 = list_藥藍資料.GetRows((int)enum_藥藍資料.CardID, CardID);
+     
             if (list_藥藍資料.Count == 0)
             {
                 this.Invoke(new Action(delegate
@@ -419,13 +425,23 @@ namespace HRFID_WinForm
             {
                 string CardID = rFID_Datas[i].Card_ID;
                 string IP = rFID_Datas[i].IP;
+              
+                list_亮燈位置設定_buf = list_亮燈位置設定.GetRows((int)enum_亮燈位置設定.IP, IP);
+                if (list_亮燈位置設定_buf.Count == 0) continue;
+                int pinNum = list_亮燈位置設定_buf[0][(int)enum_亮燈位置設定.IO_Index].StringToInt32();
+                string RFID_Name = list_亮燈位置設定_buf[0][(int)enum_亮燈位置設定.名稱].ObjectToString();
+                if (pinNum == -1) continue;
+                if (rFID_Datas[i].RSSI < -plC_NumBox_訊號強度.Value) continue;
                 list_藥藍資料_buf = this.sqL_DataGridView_藥藍資料.SQL_GetRows((int)enum_藥藍資料.CardID, CardID, false);
                 if (list_藥藍資料_buf.Count == 0) continue;
                 if (list_藥藍資料_buf[0][(int)enum_藥藍資料.已消磁].ObjectToString() == "N") continue;
                 string 藥藍指定名稱 = list_藥藍資料_buf[0][(int)enum_藥藍資料.名稱].ObjectToString();
                 list_亮燈位置設定_buf = list_亮燈位置設定.GetRows((int)enum_亮燈位置設定.名稱, 藥藍指定名稱);
+                list_亮燈位置設定_buf = list_亮燈位置設定_buf.GetRows((int)enum_亮燈位置設定.IP, IP);
                 if (list_亮燈位置設定_buf.Count == 0) continue;
-                int pinNum = list_亮燈位置設定_buf[0][(int)enum_亮燈位置設定.IO_Index].StringToInt32();
+                IP = list_亮燈位置設定_buf[0][(int)enum_亮燈位置設定.IP].ObjectToString();
+
+                pinNum = list_亮燈位置設定_buf[0][(int)enum_亮燈位置設定.IO_Index].StringToInt32();
                 list_藥藍資料_buf[0][(int)enum_藥藍資料.已消磁] = "N";
                 list_藥藍資料_buf[0][(int)enum_藥藍資料.最後掃描時間] = DateTime.Now.ToDateTimeString_6();
                 this.sqL_DataGridView_藥藍資料.SQL_ReplaceExtra(list_藥藍資料_buf[0], false);
@@ -452,7 +468,7 @@ namespace HRFID_WinForm
                 }
                 taskList.Add(Task.Run(() =>
                 {
-                    
+                    Console.WriteLine($"檢查亮燈 ,設定亮燈 {IP} ,pinNum:{pinNum}");
                     this.h_RFID_UI.Set_BlinkEnable(IP, 29030, pinNum, true, 300);
                 }));
 
